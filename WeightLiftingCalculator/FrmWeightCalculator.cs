@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WeightLiftingCalculator
 {
-    public partial class Form1 : Form
+    public partial class FrmWeightCalculator : Form
     {
-        public Form1()
+        public FrmWeightCalculator()
         {
             InitializeComponent();
         }
