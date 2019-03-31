@@ -21,5 +21,14 @@ namespace WeightLiftingCalculator
         {
 
         }
+
+        private void TESTbtn_makeCalculator_Click(object sender, EventArgs e)
+        {
+            //TODO remove the following before release
+            //The following is for testing of other screens only
+            FrmWeightCalculator calc = new FrmWeightCalculator();
+            calc.Visible = true;
+            
+        }
     }
 }
