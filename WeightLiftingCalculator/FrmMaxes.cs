@@ -21,5 +21,11 @@ namespace WeightLiftingCalculator
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmWeightCalculator calc = new FrmWeightCalculator();
+            calc.Visible = true;
+        }
     }
 }
