@@ -198,7 +198,7 @@
             this.btnWeightCalculator.TabIndex = 0;
             this.btnWeightCalculator.Text = "Weight Calculator";
             this.btnWeightCalculator.UseVisualStyleBackColor = true;
-            this.btnWeightCalculator.Click += new System.EventHandler(this.btnWeightCalculator_Click);
+            //this.btnWeightCalculator.Click += new System.EventHandler(this.btnWeightCalculator_Click);
             // 
             // btnWeightStackCalculator
             // 
@@ -208,7 +208,7 @@
             this.btnWeightStackCalculator.TabIndex = 1;
             this.btnWeightStackCalculator.Text = "Weight Stack Calculator";
             this.btnWeightStackCalculator.UseVisualStyleBackColor = true;
-            this.btnWeightStackCalculator.Click += new System.EventHandler(this.btnWeightStackCalculator_Click_1);
+            //this.btnWeightStackCalculator.Click += new System.EventHandler(this.btnWeightStackCalculator_Click_1);
 
             this.ClientSize = new System.Drawing.Size(625, 692);
             this.Controls.Add(this.btn_addExercise);
@@ -225,6 +225,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnWeightStackCalculator);
             this.Controls.Add(this.btnWeightCalculator);
+        }
 
 
         private System.Windows.Forms.Label lbl_ExerciseName;
@@ -246,6 +247,8 @@
         private System.Windows.Forms.Button btn_addExercise;
         private System.Windows.Forms.Button btnWeightCalculator;
         private System.Windows.Forms.Button btnWeightStackCalculator;
+
+        #endregion
     }
 }
 
