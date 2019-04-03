@@ -30,32 +30,5 @@ namespace WeightLiftingCalculator
             calc.Visible = true;
             
         }
-
-        private void btn_addExercise_Click(object sender, EventArgs e)
-        {
-            //TODO: Use Exercise Class
-            
-            string newExercise = txtbx_ExerciseName.Text;
-            DateTime newDate = dtp_ExerciseDate.Value;
-            float newWeight = 0F;
-            try
-            {
-                newWeight = float.Parse( txtbx_weight.Text);
-            }catch
-            {
-                MessageBox.Show("Weight must be a number.");
-            }
-            
-
-            if (radbtn_kg.Checked)
-            {
-                newWeight *= 2.20462F;
-            }
-
-            object[] oArray = { newExercise, newDate, newWeight, newWeight * 0.453592F };
-
-            dgv_pastExecises.Rows.Add(oArray);
-            
-        }
     }
 }
