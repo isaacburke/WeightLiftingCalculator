@@ -22,6 +22,7 @@ namespace WeightLiftingCalculator
 
         }
 
+
         private void TESTbtn_makeCalculator_Click(object sender, EventArgs e)
         {
             //TODO remove the following before release
@@ -56,6 +57,19 @@ namespace WeightLiftingCalculator
 
             dgv_pastExecises.Rows.Add(oArray);
             
+
+        private void btnWeightCalculator_Click(object sender, EventArgs e)
+        {
+            FrmWeightCalculator calc = new FrmWeightCalculator();
+            calc.Visible = true;
+        }
+
+
+        private void btnWeightStackCalculator_Click_1(object sender, EventArgs e)
+        {
+            FrmWeightStackCalcutator calc = new FrmWeightStackCalcutator();
+            calc.Visible = true;
+
         }
     }
 }
