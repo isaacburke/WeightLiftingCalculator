@@ -45,6 +45,7 @@
             this.txtbx_weight.Name = "txtbx_weight";
             this.txtbx_weight.Size = new System.Drawing.Size(100, 20);
             this.txtbx_weight.TabIndex = 0;
+            this.txtbx_weight.Text = "Weight";
             // 
             // btn_Calculate
             // 
@@ -117,6 +118,7 @@
             this.Controls.Add(this.txtbx_weight);
             this.Name = "FrmWeightCalculator";
             this.Text = "Weight Calculator";
+            this.Load += new System.EventHandler(this.FrmWeightCalculator_Load);
             this.pnl_units.ResumeLayout(false);
             this.pnl_units.PerformLayout();
             this.panel1.ResumeLayout(false);

@@ -20,31 +20,40 @@ namespace WeightLiftingCalculator
         private void btn_Calculate_Click(object sender, EventArgs e)
         {
             //TODO Convert string in txtbx_weight to float with a try parse
-            float weight = 0;
+            double weight = 0;
             try
             {
-                weight = float.Parse(txtbx_weight.Text);
+                weight = double.Parse(txtbx_weight.Text);
             }
             catch
             {
                 MessageBox.Show("Weight must be a number.");
             }
             //TODO Check status of radio buttons
-            float conversionFactor = 0;
+            double conversionFactor = 0;
+            string weightUnit = "";
             if (btn_lb.Checked)
             {
-                conversionFactor = .453592F;
+                conversionFactor = .453592;
+                weightUnit = "LBS";
             }
             else
             {
-                conversionFactor = 2.20462F;
+                conversionFactor = 2.20462;
+                weightUnit = "KGS";
             }
             //TODO when btn_Calculate is clicked
-            float convertedWeight = weight * conversionFactor;
+            double convertedWeight = weight * conversionFactor;
             //TODO set lbl_Converted_Weight to converted weight
-            lbl_Converted_Weight.Text = Convert.ToString(convertedWeight);
 
-           
+            lbl_Converted_Weight.Text = Convert.ToString((Math.Round(convertedWeight, 2)) + " " + weightUnit);
+
+
+        }
+
+        private void FrmWeightCalculator_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
