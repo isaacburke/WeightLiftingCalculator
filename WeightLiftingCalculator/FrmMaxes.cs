@@ -17,11 +17,6 @@ namespace WeightLiftingCalculator
             InitializeComponent();
         }
 
-        private void FrmMaxes_Load(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void TESTbtn_makeCalculator_Click(object sender, EventArgs e)
         {
@@ -29,24 +24,25 @@ namespace WeightLiftingCalculator
             //The following is for testing of other screens only
             FrmWeightCalculator calc = new FrmWeightCalculator();
             calc.Visible = true;
-            
+
         }
 
         private void btn_addExercise_Click(object sender, EventArgs e)
         {
             //TODO: Use Exercise Class
-            
+
             string newExercise = txtbx_ExerciseName.Text;
             DateTime newDate = dtp_ExerciseDate.Value;
             float newWeight = 0F;
             try
             {
-                newWeight = float.Parse( txtbx_weight.Text);
-            }catch
+                newWeight = float.Parse(txtbx_weight.Text);
+            }
+            catch
             {
                 MessageBox.Show("Weight must be a number.");
             }
-            
+
 
             if (radbtn_kg.Checked)
             {
@@ -56,7 +52,7 @@ namespace WeightLiftingCalculator
             object[] oArray = { newExercise, newDate, newWeight, newWeight * 0.453592F };
 
             dgv_pastExecises.Rows.Add(oArray);
-            
+        }
 
         private void btnWeightCalculator_Click(object sender, EventArgs e)
         {
@@ -64,11 +60,14 @@ namespace WeightLiftingCalculator
             calc.Visible = true;
         }
 
-
-        private void btnWeightStackCalculator_Click_1(object sender, EventArgs e)
+        private void btnWeightStackCalculator_Click(object sender, EventArgs e)
         {
-            FrmWeightStackCalcutator calc = new FrmWeightStackCalcutator();
+            FrmWeightStackCalculator calc = new FrmWeightStackCalculator();
             calc.Visible = true;
+        }
+
+        private void FrmMaxes_Load_1(object sender, EventArgs e)
+        {
 
         }
     }
