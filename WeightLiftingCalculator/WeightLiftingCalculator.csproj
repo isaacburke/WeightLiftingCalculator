@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmWeightStackCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWeightStackCalculator.Designer.cs">
+      <DependentUpon>FrmWeightStackCalculator.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmWeightCalculator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmMaxes.resx">
       <DependentUpon>FrmMaxes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWeightCalculator.resx">
+      <DependentUpon>FrmWeightCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWeightStackCalculator.resx">
+      <DependentUpon>FrmWeightStackCalculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
