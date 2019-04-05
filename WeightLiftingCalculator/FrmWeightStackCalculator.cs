@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WeightLiftingCalculator
 {
-    public partial class FrmWeightStackCalcutator : Form
+    public partial class FrmWeightStackCalculator : Form
     {
-        public FrmWeightStackCalcutator()
+        public FrmWeightStackCalculator()
         {
             InitializeComponent();
         }
@@ -20,15 +20,7 @@ namespace WeightLiftingCalculator
         private void FrmWeightStackCalcutator_Load(object sender, EventArgs e)
         {
             //Weight is converted to KG if needed
-            double weight = 0;
-            try
-            {
-                weight = double.Parse(txtbxWeight.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Weight must be a number.");
-            }
+
             //TODO: Weight entered has radio button subtracted
             double conversionFactor = 0;
             if (rdobtnLB.Checked)
@@ -46,6 +38,19 @@ namespace WeightLiftingCalculator
         private void rdobtnLB_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBuild_Click(object sender, EventArgs e)
+        {
+            double weight = 0;
+            try
+            {
+                weight = double.Parse(txtbxWeight.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Weight must be a number.");
+            }
         }
     }
 }
