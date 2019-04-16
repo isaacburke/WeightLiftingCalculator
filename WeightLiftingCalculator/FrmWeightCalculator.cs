@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WeightLiftingCalculator.Classes;
 
 namespace WeightLiftingCalculator
 {
@@ -19,7 +20,7 @@ namespace WeightLiftingCalculator
 
         private void btn_Calculate_Click(object sender, EventArgs e)
         {
-            //TODO Convert string in txtbx_weight to float with a try parse
+            string weightUnit = string.Empty;
             double weight = 0;
             try
             {
@@ -30,25 +31,23 @@ namespace WeightLiftingCalculator
                 MessageBox.Show("Weight must be a number.");
             }
             //TODO Check status of radio buttons
-            double conversionFactor = 0;
-            string weightUnit = "";
+            //double conversionFactor = 0;
+            
             if (btn_lb.Checked)
             {
-                conversionFactor = .453592;
-                weightUnit = "LBS";
+                weight = ConversionUtil.PoundsToKilograms(weight);
+                weightUnit = "Kgs";
             }
             else
             {
-                conversionFactor = 2.20462;
-                weightUnit = "KGS";
+                weight = ConversionUtil.KilogramsToPounds(weight);
+                weightUnit = "Lbs";
             }
             //TODO when btn_Calculate is clicked
-            double convertedWeight = weight * conversionFactor;
+            //double convertedWeight = weight * conversionFactor;
             //TODO set lbl_Converted_Weight to converted weight
 
-            lbl_Converted_Weight.Text = Convert.ToString((Math.Round(convertedWeight, 2)) + " " + weightUnit);
-
-
+            lbl_Converted_Weight.Text = Convert.ToString((Math.Round(weight, 2)) + " " + weightUnit);
         }
 
         private void FrmWeightCalculator_Load(object sender, EventArgs e)
